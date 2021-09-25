@@ -17,7 +17,7 @@ class Tasks extends Migration
           $table->uuid('id');
           $table->uuid('assigned');
           $table->string('name');
-          $table->text('description');
+          $table->text('description')->nullable();
           $table->string('category')->nullable();
           $table->enum('status', ['to-do', 'in progress', 'done'])->default('to-do');
           $table->timestamps();
