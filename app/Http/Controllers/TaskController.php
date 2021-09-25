@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
+
 /**
  * Task Controller Logic for API Requests
  */
+
 class TaskController extends Controller
 {
   public function index() {
