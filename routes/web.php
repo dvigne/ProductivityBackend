@@ -14,5 +14,15 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return response("Bad Request", 400);
 });
+
+/**
+ * Task API Requests 
+ */
+
+$router->get('/tasks',           'TaskController@index');
+$router->post('/tasks',          'TaskController@create');
+$router->get('/tasks/{task}',    'TaskController@show');
+$router->patch('/tasks/{task}',  'TaskController@update');
+$router->delete('/tasks/{task}', 'TaskController@destroy');
