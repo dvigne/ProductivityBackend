@@ -28,8 +28,8 @@ class Courier
           (object) [
           ],
           (object) [
-            'name' => "John Doe",
-            'task_title' => $data['task'],
+            'name' => $data['user_name'],
+            'task_title' => $data['task_title'],
           ]
         );
     }
