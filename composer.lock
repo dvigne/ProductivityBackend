@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "df237c432ba6afe610047384f45b2227",
+    "content-hash": "25d607ce62566fae468de6d3ce3bd5f8",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2065,6 +2065,119 @@
             "time": "2021-09-20T12:20:58+00:00"
         },
         {
+            "name": "nimbly/capsule",
+            "version": "0.11",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nimbly/Capsule.git",
+                "reference": "3a1fc6b3981a2fce930797816fd2b712925d768a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nimbly/Capsule/zipball/3a1fc6b3981a2fce930797816fd2b712925d768a",
+                "reference": "3a1fc6b3981a2fce930797816fd2b712925d768a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "php": ">=7.2",
+                "psr/http-factory": "^1.0",
+                "psr/http-message": "^1.0"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.1",
+                "phploc/phploc": "^5.0",
+                "phpunit/phpunit": "^8.0",
+                "symfony/var-dumper": "^4.3",
+                "vimeo/psalm": "^3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Capsule\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brent Scheffler",
+                    "email": "brent@nimbly.io"
+                }
+            ],
+            "description": "Capsule is a simple PSR-7 HTTP message and PSR-17 HTTP factory implementation.",
+            "support": {
+                "issues": "https://github.com/nimbly/Capsule/issues",
+                "source": "https://github.com/nimbly/Capsule/tree/0.11"
+            },
+            "time": "2019-11-05T20:33:47+00:00"
+        },
+        {
+            "name": "nimbly/shuttle",
+            "version": "0.3.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nimbly/Shuttle.git",
+                "reference": "05aa3ce4ecc5d960bc9fbc34726b48b4fbe41220"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nimbly/Shuttle/zipball/05aa3ce4ecc5d960bc9fbc34726b48b4fbe41220",
+                "reference": "05aa3ce4ecc5d960bc9fbc34726b48b4fbe41220",
+                "shasum": ""
+            },
+            "require": {
+                "ext-json": "*",
+                "nimbly/capsule": "^0.11",
+                "php": ">=7.2",
+                "psr/http-client": "^1.0"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^8.0",
+                "symfony/var-dumper": "^4.2",
+                "vimeo/psalm": "^3.0"
+            },
+            "suggest": {
+                "ext-curl": "Use cURL library to make HTTP calls."
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Shuttle\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brent Scheffler",
+                    "email": "brent@nimbly.io"
+                }
+            ],
+            "description": "Simple PSR-18 HTTP client.",
+            "keywords": [
+                "client",
+                "curl",
+                "http",
+                "http client",
+                "psr-18",
+                "stream context"
+            ],
+            "support": {
+                "issues": "https://github.com/nimbly/Shuttle/issues",
+                "source": "https://github.com/nimbly/Shuttle/tree/master"
+            },
+            "time": "2019-12-19T23:21:45+00:00"
+        },
+        {
             "name": "opis/closure",
             "version": "3.6.2",
             "source": {
@@ -2347,6 +2460,61 @@
                 "source": "https://github.com/php-fig/http-client/tree/master"
             },
             "time": "2020-06-29T06:28:15+00:00"
+        },
+        {
+            "name": "psr/http-factory",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/http-factory.git",
+                "reference": "12ac7fcd07e5b077433f5f2bee95b3a771bf61be"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/12ac7fcd07e5b077433f5f2bee95b3a771bf61be",
+                "reference": "12ac7fcd07e5b077433f5f2bee95b3a771bf61be",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0",
+                "psr/http-message": "^1.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Http\\Message\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interfaces for PSR-7 HTTP message factories",
+            "keywords": [
+                "factory",
+                "http",
+                "message",
+                "psr",
+                "psr-17",
+                "psr-7",
+                "request",
+                "response"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/http-factory/tree/master"
+            },
+            "time": "2019-04-30T12:38:16+00:00"
         },
         {
             "name": "psr/http-message",
@@ -5180,6 +5348,70 @@
                 "source": "https://github.com/tijsverkoyen/CssToInlineStyles/tree/2.2.3"
             },
             "time": "2020-07-13T06:12:54+00:00"
+        },
+        {
+            "name": "trycourier/courier",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/trycourier/courier-php.git",
+                "reference": "c95b106a421b53876b4cf7caca8829f2e1b978cd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/trycourier/courier-php/zipball/c95b106a421b53876b4cf7caca8829f2e1b978cd",
+                "reference": "c95b106a421b53876b4cf7caca8829f2e1b978cd",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "nimbly/shuttle": "^0.3",
+                "php": ">=7.2"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpunit/phpunit": "^8.1",
+                "symfony/var-dumper": "^4.2",
+                "vimeo/psalm": "^3.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Courier\\Laravel\\Providers\\CourierServiceProvider"
+                    ],
+                    "aliases": {
+                        "Courier": "Courier\\Laravel\\Facades\\CourierFacade"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Courier\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Courier",
+                    "email": "support+sdkphp@trycourier.com"
+                }
+            ],
+            "description": "PHP implementation of Courier's API as an SDK. With additional support for Laravel 5.8+",
+            "keywords": [
+                "courier",
+                "php",
+                "sdk"
+            ],
+            "support": {
+                "issues": "https://github.com/trycourier/courier-php/issues",
+                "source": "https://github.com/trycourier/courier-php/tree/v1.3.0"
+            },
+            "time": "2021-08-23T19:04:04+00:00"
         },
         {
             "name": "vlucas/phpdotenv",
