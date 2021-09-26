@@ -20,6 +20,7 @@ class Tasks extends Migration
           $table->text('description')->nullable();
           $table->string('category')->nullable();
           $table->enum('status', ['to-do', 'in progress', 'done'])->default('to-do');
+          $table->timestamp('due')->nullable();
           $table->timestamps();
           $table->primary('id');
         });

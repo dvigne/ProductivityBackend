@@ -5,7 +5,7 @@ namespace Database\Factories;
 use App\Models\Task;
 use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
-
+use Carbon\Carbon;
 class TaskFactory extends Factory
 {
     /**
@@ -28,6 +28,7 @@ class TaskFactory extends Factory
           'description' => $this->faker->text($maxNbChars=200),
           'category' => $this->faker->jobTitle(),
           'status' => $this->faker->randomElement(array('to-do', 'in progress', 'done')),
+          'due' => Carbon::now(),
         ];
     }
 }
