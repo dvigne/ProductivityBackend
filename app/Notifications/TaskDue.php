@@ -12,14 +12,18 @@ class TaskDue extends Notification
 {
     use Queueable;
 
+    private $userName;
+    private $task;
+
     /**
      * Create a new notification instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($userName, $task)
     {
-        //
+        $this->userName = $userName;
+        $this->task = $task;
     }
 
     /**
@@ -41,22 +45,6 @@ class TaskDue extends Notification
      */
     public function toCourier($notifiable)
     {
-        return (new MailMessage)
-                    ->line('The introduction to the notification.')
-                    ->action('Notification Action', url('/'))
-                    ->line('Thank you for using our application!');
-    }
-
-    /**
-     * Get the array representation of the notification.
-     *
-     * @param  mixed  $notifiable
-     * @return array
-     */
-    public function toArray($notifiable)
-    {
-        return [
-            //
-        ];
+        return collect(['user_name' => $this->userName, 'task_title' => $task->title]);
     }
 }
