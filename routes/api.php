@@ -16,11 +16,9 @@ use App\Http\Controllers\TaskController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::middleware('Auth0')->group(function() {
+  Route::resource('/task', TaskController::class)->except([
+    'create',
+    'edit'
+  ]);
 });
-
-Route::resource('/task', TaskController::class)->except([
-  'create',
-  'edit'
-]);
