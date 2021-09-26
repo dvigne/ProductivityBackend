@@ -16,9 +16,10 @@ use App\Http\Controllers\TaskController;
 |
 */
 
-Route::middleware('Auth0')->group(function() {
-  Route::resource('/task', TaskController::class)->except([
-    'create',
-    'edit'
-  ]);
+Route::middleware('auth:auth0')->group(function() {
 });
+
+Route::resource('/task', TaskController::class)->except([
+  'create',
+  'edit'
+]);
