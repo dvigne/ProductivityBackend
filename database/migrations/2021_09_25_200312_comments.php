@@ -18,7 +18,6 @@ class Comments extends Migration
         $table->uuid('task_id');
         $table->text('comment');
         $table->primary('id');
-        $table->foreign('task_id')->references('id')->on('tasks');
       });
     }
 

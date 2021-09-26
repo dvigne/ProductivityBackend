@@ -21,7 +21,6 @@ class Team extends Migration
 
       Schema::table('tasks', function(Blueprint $table) {
         $table->uuid('team_id')->after('id');
-        $table->foreign('team_id')->references('id')->on('team');
       });
     }
 
