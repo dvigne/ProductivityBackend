@@ -17,6 +17,7 @@ class Comments extends Migration
         $table->uuid('id');
         $table->uuid('task_id');
         $table->text('comment');
+        $table->timestamps();
         $table->primary('id');
       });
     }

@@ -15,7 +15,7 @@ class Tasks extends Migration
     {
         Schema::create('tasks', function(Blueprint $table) {
           $table->uuid('id');
-          $table->uuid('assigned');
+          $table->uuid('assigned')->nullable();
           $table->string('name');
           $table->text('description')->nullable();
           $table->string('category')->nullable();

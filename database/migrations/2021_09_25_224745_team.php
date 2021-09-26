@@ -16,6 +16,7 @@ class Team extends Migration
       Schema::create('team', function(Blueprint $table) {
         $table->uuid('id');
         $table->string('name');
+        $table->timestamps();
         $table->primary('id');
       });
 
