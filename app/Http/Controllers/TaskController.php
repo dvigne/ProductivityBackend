@@ -37,7 +37,7 @@ class TaskController extends Controller
   }
 
   public function show($task) {
-    return Task::findOrFail($task);
+    return Task::findOrFail($task)->with('comments')->get();
   }
 
   public function update($task, TaskRequest $request) {
