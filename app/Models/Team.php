@@ -6,11 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Str;
 
-class Comment extends Model
+class Team extends Model
 {
     use HasFactory;
 
     public $incrementing = false;
+
+    protected $table = 'team';
 
     protected static function boot()
     {
@@ -22,11 +24,16 @@ class Comment extends Model
     }
 
     protected $fillable = [
-      'task_id', 'comment'
+      'team_id', 'name'
     ];
 
-    public function task()
+    public function tasks()
     {
-      return $this->belongsTo('Task::class');
+      return $this->hasMany(Task::class);
+    }
+
+    public function members()
+    {
+      return $this->hasMany(User::class);
     }
 }
